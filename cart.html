@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина лечения</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="cart-page">
+
+<header>
+  <a href="index.html">HP</a>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="jujutsu.html">Магичка</a>
+    <a href="shop.html">Лечебный шопинг</a>
+    <a href="cart.html">Корзина</a>
+  </nav>
+</header>
+
+<main class="center">
+  <h1>Твоя лечебная корзина</h1>
+
+  <ul id="cartList"></ul>
+
+  <h2 id="totalPrice"></h2>
+
+  <button class="heal-btn" onclick="sendOrder()">
+    Отправить лечение
+  </button>
+
+  <p id="orderText"></p>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

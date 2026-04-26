@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HP Recovery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-page">
+
+<header>
+  <a href="index.html">HP</a>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="jujutsu.html">Магичка</a>
+    <a href="shop.html">Лечебный шопинг</a>
+    <a href="cart.html">Корзина</a>
+  </nav>
+</header>
+
+<main class="center">
+  <h1>Love Recovery System</h1>
+  <p>Пациент заболел. Срочно восстановить HP.</p>
+
+  <div class="hp-box">
+    <div class="hp-bar">
+      <div id="hpFill"></div>
+    </div>
+    <p id="hpText">HP: 30 / 100</p>
+  </div>
+
+  <button class="heal-btn" onclick="healHP(event)">
+    Восстановить HP
+  </button>
+
+  <p id="healMessage">Нажми, чтобы начать лечение.</p>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

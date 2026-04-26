@@ -1,0 +1,422 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  width: 100%;
+  min-height: 100%;
+}
+
+header {
+  height: 70px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  opacity: 0.8;
+}
+
+nav a:hover {
+  opacity: 1;
+  color: #8dffb1;
+}
+
+.center {
+  min-height: calc(100vh - 70px);
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home-page {
+  background: radial-gradient(circle at center, #174d2c, #06130b 70%);
+}
+
+.jujutsu-page {
+  background:
+    linear-gradient(rgba(5, 2, 13, 0.65), rgba(5, 2, 13, 0.85)),
+    url("gojo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.shop-page {
+  background: linear-gradient(135deg, #ffe1e8, #fff4d6);
+  color: #4b2530;
+}
+
+.cart-page {
+  background: radial-gradient(circle at center, #2d1b36, #08040c 75%);
+}
+
+h1 {
+  font-size: 52px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.hp-box {
+  width: 320px;
+  margin: 30px 0;
+}
+
+.hp-bar {
+  width: 100%;
+  height: 28px;
+  border: 2px solid #8dffb1;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #102018;
+}
+
+#hpFill {
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(90deg, #30ff7a, #b5ffd0);
+  transition: 0.4s;
+}
+
+.heal-btn,
+.magic-btn,
+.card button,
+.cart-link a {
+  border: none;
+  padding: 16px 28px;
+  border-radius: 999px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.heal-btn {
+  background: #72ff9f;
+  color: #06240f;
+  box-shadow: 0 0 25px #72ff9f;
+}
+
+.magic-btn {
+  background: #8b7cff;
+  color: white;
+  box-shadow: 0 0 30px #8b7cff;
+}
+
+.magic-circle {
+  width: 230px;
+  height: 230px;
+  border: 3px solid #8b7cff;
+  border-radius: 50%;
+  margin: 30px;
+  box-shadow: 0 0 40px #8b7cff, inset 0 0 40px #8b7cff;
+  animation: rotate 6s linear infinite;
+}
+
+.page-title {
+  text-align: center;
+  color: #7a3144;
+}
+
+.subtitle {
+  text-align: center;
+  color: #7a3144;
+}
+
+.products {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 25px;
+  border-radius: 28px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(120, 60, 80, 0.2);
+}
+
+.card button {
+  background: #ff9bb4;
+  color: white;
+}
+
+.cart-link {
+  text-align: center;
+  margin: 25px;
+}
+
+.cart-link a {
+  background: #7a3144;
+  color: white;
+}
+
+#cartList {
+  list-style: none;
+  padding: 0;
+  font-size: 22px;
+}
+
+#cartList li {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.particle {
+  position: fixed;
+  pointer-events: none;
+  font-weight: bold;
+  animation: fly 1s ease-out forwards;
+}
+
+@keyframes fly {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x), var(--y)) scale(1.4);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.heal-btn,
+.magic-btn,
+.card button,
+.cart-link a {
+  transition: 0.2s;
+}
+
+.heal-btn:active,
+.magic-btn:active,
+.card button:active,
+.cart-link a:active {
+  transform: scale(0.96);
+}
+
+@media (max-width: 768px) {
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  header {
+    min-height: auto;
+    padding: 18px 16px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  header > a {
+    font-size: 26px;
+  }
+
+  nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 16px;
+    padding: 12px 10px;
+    border-radius: 18px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .center {
+  min-height: calc(100vh - 140px);
+  width: 100%;
+  padding: 60px 22px;
+  }
+
+  h1 {
+    font-size: clamp(38px, 11vw, 54px);
+    line-height: 1.05;
+    margin-bottom: 18px;
+  }
+
+  p {
+    font-size: 21px;
+    line-height: 1.45;
+    max-width: 360px;
+  }
+
+  .hp-box {
+    width: 100%;
+    max-width: 380px;
+    margin: 34px 0;
+  }
+
+  .hp-bar {
+    height: 36px;
+  }
+
+  #hpText {
+    font-size: 22px;
+  }
+
+  .heal-btn,
+  .magic-btn,
+  .card button,
+  .cart-link a {
+    width: 100%;
+    max-width: 380px;
+    min-height: 64px;
+    font-size: 21px;
+    padding: 18px 24px;
+  }
+
+  .magic-circle {
+    width: 250px;
+    height: 250px;
+    margin: 34px 0;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+    padding: 22px 16px 40px;
+    gap: 18px;
+  }
+
+  .card {
+    padding: 28px 22px;
+    border-radius: 30px;
+  }
+
+  .card h2 {
+    font-size: 25px;
+  }
+
+  .card p {
+    font-size: 19px;
+    max-width: none;
+  }
+
+  .page-title {
+    font-size: clamp(38px, 11vw, 54px);
+    line-height: 1.05;
+    padding: 28px 16px 0;
+  }
+
+  .subtitle {
+    font-size: 21px;
+    padding: 0 18px;
+  }
+
+  .cart-link {
+    padding: 0 16px 40px;
+  }
+
+  #cartList {
+    width: 100%;
+    max-width: 390px;
+    font-size: 21px;
+  }
+
+  #cartList li {
+    margin: 12px 0;
+    padding: 16px 20px;
+  }
+
+  h2 {
+    font-size: 26px;
+    padding: 0 18px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    width: 100%;
+    padding: 18px;
+  }
+
+  header > a {
+    font-size: 28px;
+  }
+
+  nav a {
+    font-size: 18px;
+    padding: 14px 12px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  p {
+    font-size: 22px;
+  }
+
+  .heal-btn,
+  .magic-btn {
+    font-size: 22px;
+    min-height: 68px;
+  }
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .card img {
+    height: 220px;
+  }
+}
+
+.card {
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+}

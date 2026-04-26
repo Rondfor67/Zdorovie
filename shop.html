@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лечебный шопинг</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="shop-page">
+
+<header>
+  <a href="index.html">HP</a>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="jujutsu.html">Магичка</a>
+    <a href="shop.html">Лечебный шопинг</a>
+    <a href="cart.html">Корзина</a>
+  </nav>
+</header>
+
+<main>
+  <h1 class="page-title">Лечебный шопинг</h1>
+  <p class="subtitle">Выбери вкусняшки для восстановления сил.</p>
+
+  <section class="products">
+  <div class="card">
+    <img src="images/strawberry.jpg">
+    <h2>Клубника восстановления</h2>
+    <p>+10 к настроению</p>
+    <button onclick="addToCart('Клубника восстановления')">Добавить</button>
+  </div>
+
+  <div class="card">
+    <img src="images/ramen.jpg">
+    <h2>Рамен против простуды</h2>
+    <p>+25 к теплу внутри</p>
+    <button onclick="addToCart('Рамен против простуды')">Добавить</button>
+  </div>
+
+  <div class="card">
+    <img src="images/tea.jpg">
+    <h2>Чай с медом</h2>
+    <p>Снимает дебафф горла</p>
+    <button onclick="addToCart('Чай с медом')">Добавить</button>
+  </div>
+
+  <div class="card">
+    <img src="images/orange.jpg">
+    <h2>Апельсин витамина C</h2>
+    <p>+15 к иммунитету</p>
+    <button onclick="addToCart('Апельсин витамина C')">Добавить</button>
+  </div>
+
+  <div class="card">
+    <img src="images/soup.jpg">
+    <h2>Супчик от всех болезней</h2>
+    <p>Легендарный хил</p>
+    <button onclick="addToCart('Супчик от всех болезней')">Добавить</button>
+  </div>
+
+  <div class="card">
+    <img src="images/onigiri.jpg">
+    <h2>Онигири поддержки</h2>
+    <p>+100 к моральному состоянию</p>
+    <button onclick="addToCart('Печенька поддержки')">Добавить</button>
+  </div>
+
+   <div class="card">
+    <img src="images/zabota.jpg">
+    <h2>Любовь и забота</h2>
+    <p>+теплота +забота +выздоровление и много поцелуйчиков <3 </p>
+    <button onclick="addToCart('Печенька поддержки')">Добавить</button>
+  </div>
+</section>
+
+  <div class="cart-link">
+    <a href="cart.html">Перейти в корзину</a>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
